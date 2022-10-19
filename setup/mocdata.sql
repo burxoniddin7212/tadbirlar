@@ -41,3 +41,5 @@ DELETE FROM korilganlar_soni
 WHERE id='6';
 DELETE FROM korganlar
 WHERE id='12';
+
+INSERT INTO admins(login,parol) values ('ali','$2a$06$f4ooGLj07FSNWw5PoEIFnOchSQ9hEC56exYJM3X3D9Qg/YEmCxfdq');

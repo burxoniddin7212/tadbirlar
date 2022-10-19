@@ -4,7 +4,7 @@ const GET = async (req, res, next) => {
    try {
       const elon = await module.GETELON(req.params, req.query);
       elon.forEach(e=>{
-         e.img="http://localhost:9000/"+e.img
+         e.img="https://tadbirlar.herokuapp.com/"+e.img
       })
       if (req.params.id && elon.length == 0) return res.send({
          status: 400,
@@ -24,7 +24,9 @@ const GET = async (req, res, next) => {
 const FILTER = async (req, res, next) => {
    try {
       const elon = await module.GETELONFILTER(req.query);
-
+      elon.forEach(e=>{
+         e.img="https://tadbirlar.herokuapp.com/"+e.img
+      })
       if (elon.length == 0) return res.send({
          status: 400,
          message: "bunday data yo'q"
